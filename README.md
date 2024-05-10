@@ -35,3 +35,14 @@ Commands to execute the code
 ### Observations  
 This experiment was conducted on the NVIDIA L4 GPU (Ada Lovelace architecture) through google colab and through a gcp instance with the same setup. Due to RAM contraints, and the increasing difficulty to obatin a GPU, the Google/Gemma-2B model was used which has a smaller footprint. Efforts in optimizing the inference of gemma proved to be successful to a certain extent. Despite the quantization and reduced precision efforts, the results were still comparably accurate with the original model. Furthermore, efforts in fine tuning machine prompt task yield comparable accuracy with using the Flash Attention and Qlora methods as the bar chart above shows. Model are also saved in huggingface hub [here](https://huggingface.co/jn2814).
 
+
+## *Updated Results 5/9/2024 
+
+![Alt text](report/psutils.png)
+![Alt text](report/profiler.png)
+![Alt text](report/rerun.png)
+
+
+
+## *Update 5/9/2024
+Per feedback from the Professor, the resuls were quite unexpected but I was unable to debug and retrain why. I updated the metrics.ipynb notebook to update my findings to the best of my ability. Unfortunatly due to the limited time reamining before the deadline,  I was unable to experiment with different hardware and evaluation packages. Using the Lm_eval and the gemma-2b card had a high level of abstraction and demanded a lot of trust that I wish I could dive deeper into. 
